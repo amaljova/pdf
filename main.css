@@ -1,0 +1,144 @@
+
+:root {
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+    --file-bg: #333;
+    --btn-bg: #0056b3;
+    --btn-text: #ffffff;
+    --progress-bg: #333;
+    --progress-color: #4CAF50;
+}
+.light-theme {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --file-bg: #f3f3f3;
+    --btn-bg: #007BFF;
+    --btn-text: white;
+    --progress-bg: #e0e0e0;
+    --progress-color: #4CAF50;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+#theme-switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 5px;
+}
+#drop-area {
+    border: 2px dashed var(--btn-bg);
+    padding: 20px;
+    margin: 10px auto;
+    width: 80%;
+    cursor: pointer;
+}
+#file-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.file-item {
+    background: var(--file-bg);
+    padding: 10px;
+    margin: 5px;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+}
+.thumbnail {
+    width: 50px;
+    height: 60px;
+    background: #ccc;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #555;
+}
+.file-icon {
+    width: 40px;
+    height: 40px;
+}
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 3px;
+}
+.btn {
+    margin: 5px;
+    padding: 10px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#merged-container {
+    display: none;
+    margin-top: 20px;
+}
+.file-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+.progress-container {
+    width: 80%;
+    margin: 20px auto;
+    display: none;
+}
+.progress-bar {
+    width: 100%;
+    background-color: var(--progress-bg);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progress {
+    height: 20px;
+    background-color: var(--progress-color);
+    width: 0%;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    transition: width 0.3s;
+}
+.file-type {
+    margin-left: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    background: var(--btn-bg);
+}
+.error-log {
+    margin-top: 20px;
+    color: #ff6b6b;
+    text-align: left;
+    display: none;
+    max-width: 80%;
+    margin: 20px auto;
+    background: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
